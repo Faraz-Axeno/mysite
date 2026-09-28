@@ -40,6 +40,28 @@
   --nav-height: 64px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 2. Target ALL AEM sections globally to snap into place */
+body main .section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always; /* Forces it to stop at every section */
+  
+  /* Make every section exactly the height of the screen */
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 /* Only targets paragraphs that share a section with an image-text block */
 .section-intro-title {

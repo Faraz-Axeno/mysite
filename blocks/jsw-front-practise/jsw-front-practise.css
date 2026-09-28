@@ -1,83 +1,91 @@
-html, body {
+html, 
+body {
   background-color: #000000;
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
+  scroll-behavior: auto; 
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
-header.header-wrapper,
-footer.footer-wrapper {
-  display: none !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-body header.header-wrapper,
-body footer.footer-wrapper {
+
+::-webkit-scrollbar {
   display: none;
+  width: 0;
   height: 0;
-  padding: 0;
-  margin: 0;
 }
 
-body main {
+main .section.jsw-front-practise-container {
   padding: 0;
   margin: 0;
-  max-width: 100%;
-}
-
-body main .section.jsw-front-practise-container,
-body main .section.jsw-front-practise-container .jsw-front-practise-wrapper {
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
   background-color: #000000;
+  position: relative;
+  overflow: hidden;
 }
 
-.jsw-front-practise {
-  position: relative;
+main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
+  max-width: 100%;
   width: 100%;
-  min-height: 100vh; 
+  padding: 0;
+  margin: 0;
+}
+
+.jsw-front-practise-container .jsw-front-practise {
+  position: relative;
+  height: 100vh; 
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: flex-end; 
-  background-color: #000000;
-  padding-bottom: 1.5rem; 
+  padding-bottom: 2rem; 
   box-sizing: border-box;
-  overflow: hidden;
 }
 
-.jsw-hero-media {
+.jsw-front-practise-container .jsw-hero-media {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%; 
+  width: 100vw; 
+  height: 100vh; 
   z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
-.jsw-hero-bg-img {
+.jsw-front-practise-container .jsw-hero-media picture,
+.jsw-front-practise-container .jsw-hero-bg-img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
   object-position: center top;
-  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.jsw-front-practise::after {
+.jsw-front-practise-container .jsw-front-practise::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 85%, #000000 95%, #000000 100%);
+  background: linear-gradient(
+    to bottom, 
+    rgba(0,0,0,0) 0%, 
+    rgba(0,0,0,0) 60%, 
+    rgba(0,0,0,0.5) 85%, 
+    #000000 95%, 
+    #000000 100%
+  );
   z-index: 2;
   pointer-events: none;
 }
 
-.jsw-hero-content {
+.jsw-front-practise-container .jsw-hero-content {
   position: relative;
   z-index: 3;
   text-align: center;
@@ -90,8 +98,8 @@ body main .section.jsw-front-practise-container .jsw-front-practise-wrapper {
   width: 100%;
 }
 
-.jsw-hero-title {
-  color: #FFF;
+.jsw-front-practise-container .jsw-hero-title {
+  color: #ffffff;
   text-align: center;
   font-family: "New Science", sans-serif;
   font-size: 72px;
@@ -100,11 +108,11 @@ body main .section.jsw-front-practise-container .jsw-front-practise-wrapper {
   line-height: 100%;
   letter-spacing: -3.6px;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   white-space: nowrap;
 }
 
-.jsw-hero-desc {
+.jsw-front-practise-container .jsw-hero-desc {
   font-size: 0.85rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -112,14 +120,14 @@ body main .section.jsw-front-practise-container .jsw-front-practise-wrapper {
   color: #888888;
 }
 
-.jsw-hero-btn {
+.jsw-front-practise-container .jsw-hero-btn {
   display: flex;
   width: 254px;
-  padding: 24px;
+  padding: 22px 24px;
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
-  background: #FFF;
+  background: #ffffff;
   color: #000000;
   border: none;
   font-size: 0.85rem;
@@ -130,7 +138,21 @@ body main .section.jsw-front-practise-container .jsw-front-practise-wrapper {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.jsw-hero-btn:hover {
+.jsw-front-practise-container .jsw-hero-btn:hover {
   background-color: #e0e0e0;
   transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .jsw-front-practise-container .jsw-hero-title {
+    font-size: 36px; 
+    letter-spacing: -1.8px;
+    white-space: normal; 
+    max-width: 320px;
+  }
+  
+  .jsw-front-practise-container .jsw-hero-btn {
+    width: 100%;
+    max-width: 320px; 
+  }
 }

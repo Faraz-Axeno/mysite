@@ -113,12 +113,17 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
+  
   if (!block || !block.firstElementChild) return;
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  if (navMeta === 'no' || navPath === '/no') {
+    block.closest('.header-wrapper').style.display = 'none';
+    return;
+  }
   const fragment = await loadFragment(navPath);
-
+  if (!fragment) return;
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');

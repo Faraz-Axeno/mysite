@@ -71,3 +71,42 @@ body main .section.countdown-container .countdown-wrapper {
   font-weight: 200;
   transform: translateY(-12px); 
 }
+@media screen and (max-width: 1024px) {
+  .countdown-container h2 {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+  }
+
+  .jsw-timer-container {
+    font-size: 80px; 
+    letter-spacing: -1px;
+  }
+
+  .jsw-timer-number {
+    min-width: 95px; 
+  }
+
+  .jsw-timer-separator {
+    margin: 0 8px;
+    transform: translateY(-6px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-container h2 {
+    font-size: 24px; 
+  }
+
+  .jsw-timer-container {
+    font-size: 48px; 
+  }
+
+  .jsw-timer-number {
+    min-width: 60px;
+  }
+
+  .jsw-timer-separator {
+    margin: 0 4px;
+    transform: translateY(-3px);
+  }
+}
