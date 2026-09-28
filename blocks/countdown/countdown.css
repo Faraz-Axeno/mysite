@@ -1,0 +1,73 @@
+body main .section.countdown-container {
+  padding: 18vh 0 0 0; 
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 1.5rem; 
+  box-sizing: border-box;
+}
+
+body main .section.countdown-container .default-content-wrapper,
+body main .section.countdown-container .countdown-wrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto; 
+  display: flex;
+  justify-content: center;
+  
+}
+
+.countdown-container h2 {
+  color: #A5A5A5;
+  text-align: center;
+  font-family: "New Science", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105%; 
+  letter-spacing: -2.6px;
+  text-transform: uppercase;
+  margin: 0; 
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000000;
+}
+
+.jsw-timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "New Science", sans-serif;
+  font-size: 140px; 
+  font-weight: 200; 
+  letter-spacing: -2px;
+  color: #3b3b3b; 
+  line-height: 1;
+}
+
+.jsw-timer-number {
+  display: inline-block;
+  min-width: 170px;
+  text-align: center;
+}
+
+.jsw-timer-separator {
+  margin: 0 15px;
+  color: #1a1a1a; 
+  font-weight: 200;
+  transform: translateY(-12px); 
+}

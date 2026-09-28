@@ -40,6 +40,7 @@
   --nav-height: 64px;
 }
 
+
 /* Only targets paragraphs that share a section with an image-text block */
 .section-intro-title {
   font-size: 24px;
@@ -84,9 +85,10 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: var(--body-font-family);
+  font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body.appear {
@@ -331,4 +333,28 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* 1. Completely collapse the empty header tag so it takes up 0 pixels */
+body.jsw-front-practise header,
+body.jsw-front-practise .header-wrapper,
+body.jsw-front-practise footer,
+body.jsw-front-practise .footer-wrapper {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. Strip any residual top margin from the main container */
+body.jsw-front-practise main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 3. Ensure the top section touches the absolute top */
+body.jsw-front-practise main .section:first-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
