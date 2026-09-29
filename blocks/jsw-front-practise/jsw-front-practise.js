@@ -4,7 +4,7 @@ export default async function decorate(block) {
   window.addEventListener('wheel', (e) => e.preventDefault(), { passive: false });
   window.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
   window.addEventListener('keydown', (e) => {
-    if (["Space", "ArrowUp", "ArrowDown", "PageUp", "PageDown"].includes(e.code)) {
+    if (['Space', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown'].includes(e.code)) {
       e.preventDefault();
     }
   }, { passive: false });
@@ -15,7 +15,7 @@ export default async function decorate(block) {
     sectionWrapper.style.margin = '0';
     sectionWrapper.style.maxWidth = '100%';
   }
-  
+
   const row = block.firstElementChild;
   if (!row) return;
 
@@ -29,7 +29,7 @@ export default async function decorate(block) {
     if (img) img.classList.add('jsw-hero-bg-img');
   }
 
-  let button; 
+  let button;
 
   if (textCol) {
     textCol.classList.add('jsw-hero-content');
@@ -42,16 +42,16 @@ export default async function decorate(block) {
 
     button = document.createElement('button');
     button.classList.add('jsw-hero-btn');
- 
+
     const btnText = document.createElement('span');
     btnText.textContent = 'REGISTER INTEREST';
-    
+
     const btnIcon = document.createElement('span');
     btnIcon.textContent = '+';
-    
+
     button.appendChild(btnText);
     button.appendChild(btnIcon);
-    
+
     textCol.appendChild(button);
   }
 
@@ -66,22 +66,21 @@ export default async function decorate(block) {
     if (sections.length === 0) return;
 
     let isAnimating = false;
-    let currentIndex = 0; 
+    let currentIndex = 0;
 
     const goToSection = (index) => {
-     
       if (index < 0 || index >= sections.length || isAnimating) return;
-      
+
       isAnimating = true;
       currentIndex = index;
 
       gsap.to(window, {
         scrollTo: sections[currentIndex],
         duration: 1.2,
-        ease: "power3.inOut",
+        ease: 'power3.inOut',
         onComplete: () => {
           setTimeout(() => { isAnimating = false; }, 400);
-        }
+        },
       });
     };
 
@@ -95,9 +94,9 @@ export default async function decorate(block) {
       if (isAnimating) return;
 
       if (e.deltaY > 15) {
-        goToSection(currentIndex + 1); 
+        goToSection(currentIndex + 1);
       } else if (e.deltaY < -15) {
-        goToSection(currentIndex - 1); 
+        goToSection(currentIndex - 1);
       }
     });
 
@@ -108,18 +107,17 @@ export default async function decorate(block) {
 
     window.addEventListener('touchmove', (e) => {
       if (isAnimating) return;
-      
+
       const touchEndY = e.touches[0].clientY;
       const swipeDistance = touchStartY - touchEndY;
 
-      if (Math.abs(swipeDistance) > 30) { 
+      if (Math.abs(swipeDistance) > 30) {
         if (swipeDistance > 0) {
-          goToSection(currentIndex + 1); 
+          goToSection(currentIndex + 1);
         } else {
-          goToSection(currentIndex - 1); 
+          goToSection(currentIndex - 1);
         }
       }
     });
-
-  }, 500); 
+  }, 500);
 }

@@ -1,10 +1,10 @@
 body main .section.countdown-container {
-  padding: 18vh 0 0 0; 
+  padding: 18vh 0 0; 
   margin: 0;
   max-width: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +44,7 @@ body main .section.countdown-container .countdown-wrapper {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #000000;
+  background-color: #000;
 }
 
 .jsw-timer-container {
@@ -71,7 +71,8 @@ body main .section.countdown-container .countdown-wrapper {
   font-weight: 200;
   transform: translateY(-12px); 
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (width <= 1024px) {
   .countdown-container h2 {
     font-size: 32px;
     letter-spacing: -1.5px;
@@ -92,7 +93,7 @@ body main .section.countdown-container .countdown-wrapper {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
   .countdown-container h2 {
     font-size: 24px; 
   }

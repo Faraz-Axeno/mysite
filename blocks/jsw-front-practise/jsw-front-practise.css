@@ -1,6 +1,6 @@
 html, 
 body {
-  background-color: #000000;
+  background-color: #000;
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
@@ -21,7 +21,7 @@ main .section.jsw-front-practise-container {
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #000;
   position: relative;
   overflow: hidden;
 }
@@ -75,11 +75,11 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   height: 100%;
   background: linear-gradient(
     to bottom, 
-    rgba(0,0,0,0) 0%, 
-    rgba(0,0,0,0) 60%, 
-    rgba(0,0,0,0.5) 85%, 
-    #000000 95%, 
-    #000000 100%
+    rgb(0 0 0 / 0%) 0%, 
+    rgb(0 0 0 / 0%) 60%, 
+    rgb(0 0 0 / 50%) 85%, 
+    #000 95%, 
+    #000 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -89,7 +89,7 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   position: relative;
   z-index: 3;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   padding: 0 1.5rem;
   max-width: 1200px;
   display: flex;
@@ -99,7 +99,7 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
 }
 
 .jsw-front-practise-container .jsw-hero-title {
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   font-family: "New Science", sans-serif;
   font-size: 72px;
@@ -117,7 +117,7 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1.5rem; 
-  color: #888888;
+  color: #888;
 }
 
 .jsw-front-practise-container .jsw-hero-btn {
@@ -127,8 +127,8 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   border: none;
   font-size: 0.85rem;
   font-weight: 600;
@@ -143,7 +143,7 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   transform: translateY(-2px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .jsw-front-practise-container .jsw-hero-title {
     font-size: 36px; 
     letter-spacing: -1.8px;

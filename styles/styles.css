@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -46,28 +47,34 @@ html {
 }
 
 body {
+  display: none;
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Inter, sans-serif;
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* 2. Target ALL AEM sections globally to snap into place */
-body main .section {
+/* Target all AEM sections globally to snap into place */
+main > .section {
   scroll-snap-align: start;
-  scroll-snap-stop: always; /* Forces it to stop at every section */
-  
+  scroll-snap-stop: always;
+
   /* Make every section exactly the height of the screen */
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  margin: 40px 0;
 }
-
 
 /* Only targets paragraphs that share a section with an image-text block */
 .section-intro-title {
   font-size: 24px;
   font-weight: bold;
-  color: #333333;
+  color: #333;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -102,17 +109,6 @@ body main .section {
   }
 }
 
-body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: 'Inter', sans-serif;
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
 body.appear {
   display: block;
 }
@@ -145,12 +141,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -329,10 +342,6 @@ main img {
 }
 
 /* sections */
-main > .section {
-  margin: 40px 0;
-}
-
 main > .section > div {
   max-width: 1200px;
   margin: auto;
@@ -357,7 +366,7 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* 1. Completely collapse the empty header tag so it takes up 0 pixels */
+/* Completely collapse the empty header tag so it takes up 0 pixels */
 body.jsw-front-practise header,
 body.jsw-front-practise .header-wrapper,
 body.jsw-front-practise footer,
@@ -369,14 +378,15 @@ body.jsw-front-practise .footer-wrapper {
   padding: 0 !important;
 }
 
-/* 2. Strip any residual top margin from the main container */
+/* Strip any residual top margin from the main container */
 body.jsw-front-practise main {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* 3. Ensure the top section touches the absolute top */
+/* Ensure the top section touches the absolute top */
 body.jsw-front-practise main .section:first-child {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
+

@@ -1,8 +1,7 @@
 export default function decorate(block) {
- 
   const dateCell = block.firstElementChild?.firstElementChild;
   if (!dateCell) return;
-  
+
   const targetDateStr = dateCell.textContent.trim();
   const targetDate = new Date(targetDateStr).getTime();
 
@@ -31,19 +30,27 @@ export default function decorate(block) {
 
   block.appendChild(timerDisplay);
 
+  let interval;
+
   const updateTimer = () => {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
     if (distance < 0) {
       clearInterval(interval);
-      return; 
+      return;
     }
 
     const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((distance % (1000 * 60)) / 1000);
+    const h = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const m = Math.floor(
+      (distance % (1000 * 60 * 60)) / (1000 * 60),
+    );
+    const s = Math.floor(
+      (distance % (1000 * 60)) / 1000,
+    );
 
     elements.days.textContent = String(d).padStart(2, '0');
     elements.hours.textContent = String(h).padStart(2, '0');
@@ -51,6 +58,6 @@ export default function decorate(block) {
     elements.seconds.textContent = String(s).padStart(2, '0');
   };
 
-  updateTimer(); 
-  const interval = setInterval(updateTimer, 1000);
+  updateTimer();
+  interval = setInterval(updateTimer, 1000);
 }

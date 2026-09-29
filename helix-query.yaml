@@ -1,0 +1,21 @@
+indices:
+  blog:
+    include:
+      - '/blog/**'
+    target: '/blog/query-index.json'
+    properties:
+      title:
+        select: 'h1'
+        value: 'textContent'
+      description:
+        select: 'meta[name="description"]'
+        value: 'attribute(content)'
+      image:
+        select: 'meta[property="og:image"]'
+        value: 'attribute(content)'
+      tags:
+        select: 'meta[name="tags"]'
+        value: 'attribute(content)'
+      publishDate:
+        select: 'meta[name="publish-date"]'
+        value: 'attribute(content)'

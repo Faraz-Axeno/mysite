@@ -154,12 +154,12 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateButtons(main);
 
-    const defaultWrappers = main.querySelectorAll('.image-text-container .default-content-wrapper');
-    defaultWrappers.forEach((wrapper)=>{
-      const paragraph = wrapper.querySelectorAll('p');
+  const defaultWrappers = main.querySelectorAll('.image-text-container .default-content-wrapper');
+  defaultWrappers.forEach((wrapper) => {
+    const paragraph = wrapper.querySelectorAll('p');
 
-      paragraph.forEach((p) => p.classList.add('section-intro-title') );
-    });
+    paragraph.forEach((p) => p.classList.add('section-intro-title'));
+  });
 }
 
 /**
