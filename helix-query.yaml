@@ -5,8 +5,8 @@ indices:
     target: '/blog/query-index.json'
     properties:
       title:
-        select: 'h1'
-        value: 'textContent'
+        select: 'meta[property="og:title"]'
+        value: 'attribute(content)'
       description:
         select: 'meta[name="description"]'
         value: 'attribute(content)'
@@ -14,8 +14,5 @@ indices:
         select: 'meta[property="og:image"]'
         value: 'attribute(content)'
       tags:
-        select: 'meta[name="tags"]'
-        value: 'attribute(content)'
-      publishDate:
-        select: 'meta[name="publish-date"]'
+        select: 'meta[property="article:tag"]'
         value: 'attribute(content)'
