@@ -16,5 +16,29 @@
         "label": "Text Content"
       }
     ]
+  },
+  {
+    "id": "jsw-front-practise",
+    "title": "JSW Front Practise",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image"
+      }
+    ]
   }
 ]

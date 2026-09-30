@@ -2,7 +2,8 @@
   {
     "id": "main",
     "components": [
-      "image-text"
+      "image-text",
+      "jsw-front-practise"
     ]
   }
 ]
