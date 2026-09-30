@@ -1,0 +1,20 @@
+[
+  {
+    "id": "image-text",
+    "title": "Image Text",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Icon/Image"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text Content"
+      }
+    ]
+  }
+]
