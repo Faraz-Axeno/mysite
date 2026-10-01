@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 html, 
 body {
   background-color: #000;
@@ -102,40 +103,46 @@ main .section.jsw-front-practise-container > .jsw-front-practise-wrapper {
   color: #fff;
   text-align: center;
   font-family: "New Science", sans-serif;
-  font-size: 72px;
+  font-size: 64px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: -3.6px;
+  letter-spacing: normal;
   text-transform: uppercase;
   margin-bottom: 1rem;
   white-space: nowrap;
 }
 
 .jsw-front-practise-container .jsw-hero-desc {
-  font-size: 0.85rem;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 1.5rem; 
-  color: #888;
+  margin-bottom: 2rem; 
+  color: #A5A5A5;
+  font-weight: 400; 
+  text-align: center;
 }
 
 .jsw-front-practise-container .jsw-hero-btn {
   display: flex;
-  width: 254px;
-  padding: 22px 24px;
+  width: auto;
+  min-width: 220px;
+  gap: 16px;
+  padding: 14px 24px;
   justify-content: space-between;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #fff;
   color: #000;
   border: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
   cursor: pointer;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  font-family: roboto, roboto-fallback, sans-serif;
 }
 
 .jsw-front-practise-container .jsw-hero-btn:hover {

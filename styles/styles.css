@@ -21,8 +21,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: "New Science", roboto-fallback, sans-serif;
+  --heading-font-family: "New Science", roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -52,7 +52,7 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Inter, sans-serif;
+  font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
   overflow-x: hidden;
@@ -228,6 +228,7 @@ button.button {
   border-radius: 2.4em;
   padding: 0.5em 1.2em;
   font: inherit;
+  font-family: roboto, roboto-fallback, sans-serif;
   font-weight: 500;
   line-height: 1.25;
   text-decoration: none;

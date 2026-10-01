@@ -1,5 +1,13 @@
 /* stylelint-disable max-line-length */
 @font-face {
+  font-family: "New Science";
+  src: url('../fonts/fonnts.com-New_Science_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: roboto-condensed;
   font-style: normal;
   font-weight: 700;

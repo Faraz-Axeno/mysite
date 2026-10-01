@@ -22,7 +22,6 @@ body main .section.countdown-container .countdown-wrapper {
   flex: 0 0 auto; 
   display: flex;
   justify-content: center;
-  
 }
 
 .countdown-container h2 {
@@ -59,11 +58,44 @@ body main .section.countdown-container .countdown-wrapper {
   line-height: 1;
 }
 
+/* CROSSFADE WITH SMOOTH JUMP ANIMATION */
 .jsw-timer-number {
   display: inline-block;
   min-width: 170px;
   text-align: center;
+  position: relative;
+  height: 1.1em; /* Maintains container height so nothing collapses */
 }
+
+.jsw-timer-number span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ease-out for opacity, and a bouncy cubic-bezier for the jump/scale */
+  transition: opacity 0.3s ease-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.jsw-timer-number span.current {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.jsw-timer-number span.prev {
+  opacity: 0;
+  transform: scale(1.05) translateY(-2px); /* Slight expansion and micro-bump up */
+}
+
+.jsw-timer-number span.next {
+  opacity: 0;
+  transform: scale(0.95) translateY(2px); /* Slight contraction and micro-bump down */
+}
+/* END CROSSFADE ANIMATION CLASSES */
+/* END CROSSFADE ANIMATION CLASSES */
 
 .jsw-timer-separator {
   margin: 0 15px;
