@@ -76,6 +76,7 @@ body main .section.countdown-container .countdown-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* ease-out for opacity, and a bouncy cubic-bezier for the jump/scale */
   transition: opacity 0.3s ease-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
@@ -94,7 +95,9 @@ body main .section.countdown-container .countdown-wrapper {
   opacity: 0;
   transform: scale(0.95) translateY(2px); /* Slight contraction and micro-bump down */
 }
+
 /* END CROSSFADE ANIMATION CLASSES */
+
 /* END CROSSFADE ANIMATION CLASSES */
 
 .jsw-timer-separator {

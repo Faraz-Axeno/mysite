@@ -41,7 +41,7 @@ export default function decorate(block) {
   const updateUnit = (unit, value) => {
     const strVal = String(value).padStart(2, '0');
     const el = elements[unit];
-    
+
     if (el.dataset.value === strVal) return;
     el.dataset.value = strVal;
 
@@ -54,11 +54,11 @@ export default function decorate(block) {
     if (oldSpan) {
       oldSpan.classList.remove('current');
       oldSpan.classList.add('prev');
-      
+
       // Remove old number after the fade transition completes
       setTimeout(() => {
         if (oldSpan.parentNode === el) el.removeChild(oldSpan);
-      }, 400); 
+      }, 400);
     }
 
     // Trigger fade in
